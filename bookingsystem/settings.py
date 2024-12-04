@@ -23,9 +23,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
+#SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = "Xp2tA?Zu)!Sr&7-xc:k+iiO{<my`;b"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+
+
 
 ALLOWED_HOSTS = ['8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
 '.herokuapp.com']
@@ -88,10 +92,6 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-# Get SECRET_KEY from the environment
-SECRET_KEY = os.getenv('SECRET_KEY')
-if not SECRET_KEY:
-    raise ValueError("The SECRET_KEY environment variable is missing!")
 
 
 # Password validation
