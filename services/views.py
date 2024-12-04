@@ -3,4 +3,4 @@ from django.http import HttpResponse
 
 # Create your views here.
 def placeholder(request):
-    return('Hello, User!')
+    return HttpResponse('Hello, User!')
