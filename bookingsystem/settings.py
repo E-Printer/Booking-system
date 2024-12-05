@@ -29,14 +29,14 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
-    
-]
 
 ALLOWED_HOSTS = ['8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
 '.herokuapp.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
+    
+]
 
 # Application definition
 
