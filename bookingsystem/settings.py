@@ -29,7 +29,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
+    
+]
 
 ALLOWED_HOSTS = ['8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
 '.herokuapp.com']
@@ -45,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'services',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -62,7 +66,9 @@ ROOT_URLCONF = 'bookingsystem.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
