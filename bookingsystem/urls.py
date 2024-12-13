@@ -21,6 +21,5 @@ from accounts import views as accounts_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('services/', service_views.service, name='service'),
     path('accounts/', include('accounts.urls')),
 ]
