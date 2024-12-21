@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>Available Slots</h2>
+  <ul>
+    {% for slot in slots %}
+      <li>{{ slot.date }} {{ slot.time }} - <a href="{% url 'book_slot' slot.id %}">Book</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
