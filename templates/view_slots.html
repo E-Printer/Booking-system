@@ -1,9 +1,22 @@
 {% extends 'base.html' %}
 {% block content %}
-  <h2>Available Slots</h2>
-  <ul>
-    {% for slot in slots %}
-      <li>{{ slot.date }} {{ slot.time }} - <a href="{% url 'book_slot' slot.id %}">Book</a></li>
-    {% endfor %}
-  </ul>
+    <h1>Available Surf Sessions</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Session Type</th>
+                <th>Book</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for session in surf_sessions %}
+                <tr>
+                    <td>{{ session.time }}</td>
+                    <td>{{ session.type }}</td>
+                    <td><a href="{% url 'book_slot' session.type %}">Book Now</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock %}
