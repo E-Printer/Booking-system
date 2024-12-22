@@ -3,7 +3,7 @@
   <h2>My Bookings</h2>
   <ul>
     {% for booking in bookings %}
-      <li>{{ booking.slot.date }} {{ booking.slot.time }}</li>
+      <li>{{ booking.slot.date }} {{ booking.slot.time }} {{booking.slot.session_type}}</li>
     {% endfor %}
   </ul>
 {% endblock %}

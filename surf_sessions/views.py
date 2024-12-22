@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404, HttpResponseRedirect
 from .models import Slot, Booking
 from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
@@ -44,7 +44,7 @@ def book_slot(request, session_type):
                 slot.is_available = False
                 slot.save()
                 messages.success(request, "Slot booked successfully!")
-                return redirect('view_bookings')
+                return redirect('view_bookings')  # Redirect to view_bookings after successful booking
             except Slot.DoesNotExist:
                 messages.error(request, "No Slot matches the given query.")
         else:

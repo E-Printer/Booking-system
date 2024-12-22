@@ -7,7 +7,7 @@
     <div class="card" style="width: 100%; max-width: 800px; background-color: #f9f9f9;">
         <div class="card-body text-center card-body-custom" style="background-color: #f9f9f9;">
             <h1>Book Your Surf!</h1>
-            <form action="" method="post">
+            <form action="{% url 'book_slot' session_type=session_type %}" method="post">
                 {% csrf_token %}
                 <div>
                     {{ form.as_p }}
@@ -32,9 +32,8 @@
         {% endfor %}
     </ul>
 </div>
-</div>
-
 {% endif %}
+
 
 
 

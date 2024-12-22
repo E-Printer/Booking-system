@@ -34,11 +34,11 @@ else:
     DEBUG = False
 
 
-ALLOWED_HOSTS = ['8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8000-eprinter-bookingsystem-p86fjqvfmea.ws.codeinstitute-ide.net',
 '.herokuapp.com']
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-eprinter-bookingsystem-4b09lssj64h.ws.codeinstitute-ide.net',
+    'https://8000-eprinter-bookingsystem-p86fjqvfmea.ws.codeinstitute-ide.net',
     
 ]
 
